@@ -1,0 +1,45 @@
+.form-label{
+    margin-bottom: 1%;
+    border-color: black;
+    margin-top: 4%;
+}
+.btn-primary{
+    margin-top: 10px;
+}
+.form-group{
+    display:grid;
+    align-self: center;
+    width: 40%;
+}
+.form-control{
+    margin: 1%;
+}
+
+.container{
+    display:grid;
+    /* justify-content: center; */
+    /* align-content: center; */
+    /* align-self: center; */
+    /* border: solid;
+    border-width: 1px;
+    border-radius: 10px; */
+    margin-bottom: 0.5%;
+    width:inherit;
+}
+.error{
+    color: red;
+}
+.container h3{
+    display: inline;
+    background-color: aqua;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 1%;
+    width:50%;
+}
+.container form{
+    border: solid;
+    padding: 1%;
+    border-radius: 10px;
+    width: 50%;
+}

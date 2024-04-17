@@ -1,0 +1,22 @@
+<div class="container">
+    <h3>Search Bus here</h3>
+
+    <form class="form-group">
+            <label class="form-label">FromCity</label>
+            <select class="form-select" id="fromCity" name="fromCity" aria-label="Select an Option" [formControl]="fromCity" required>
+            <option *ngFor="let city of cities" id="{{city.cityId}}" value="{{city.cityId}}">{{city.cityName}}, ({{city.stateName}})</option></select>
+
+            <label class="form-label">ToCity</label>
+            <select class="form-select" id="toCity" name="toCity" aria-label="Select an Option" [formControl]="toCity" required>
+            <option *ngFor="let city of cities" id="{{city.cityId}}" value="{{city.cityId}}">{{city.cityName}}, ({{city.stateName}})</option></select>
+            <div *ngIf="fromCity.value == toCity.value  && !fromCity.pristine && !toCity.pristine ">
+                <p class="error">Please select different cities</p>
+            </div>
+            <label class="form-label">TravelDate</label>
+            <input class="form-select" id="travelDate"  type="date" [formControl]="travelDate" placeholder="{{travelDate.value}}"  [min]="today">
+
+            <button  class="btn btn-primary" type="submit" (click)="onSubmit()" [disabled]="!(fromCity.valid && toCity.valid && !travelDate.pristine && travelDate.valid && !(fromCity.value == toCity.value))">submit</button>
+    </form>
+</div>
+<br>
+{{travelDate.value}}

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="ticket shadow p-3 mb-5 bg-white rounded">
+          <div class="text-center">
+            <h1 class="mb-4">Ticket Booked</h1>
+            <p class="mb-3">Thank you for booking your bus ticket with us!</p>
+          </div>
+          <div class="text-center mt-4">
+            <p>Departure: {{printTicket.travelDate}}</p>
+            <p>From: {{printTicket.fromCity}}</p>
+            <p>To: {{printTicket.toCity}}</p>
+            <p>Seat: {{printTicket.bookingDetails}}</p>
+          </div>
+          <div class="text-center mt-4">
+            <p class="font-weight-bold">Have a safe journey!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+        <button type="button" (click)="onPrint()">print</button>
+    </div>
+  </div>

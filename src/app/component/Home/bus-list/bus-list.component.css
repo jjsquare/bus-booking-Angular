@@ -1,0 +1,27 @@
+.list-group-item{
+    /* display:contents; */
+    border: none;
+    /* margin: 1%; */
+}
+.green{
+    border: solid;
+    border-color: rgba(00, 255, 0, 1);
+    border-radius: 10px;
+    padding: 1%;
+}
+.blue{
+    border: solid;
+    border-color: rgba(0, 00, 255, 1);
+    border-radius: 10px;
+    padding: 1%;
+}
+.red{
+    border: solid;
+    border-color: rgba(255, 00, 0, 1);
+    border-radius: 10px;
+    padding: 1%;
+}
+.btn-primary{
+    margin: 1%;
+    
+}

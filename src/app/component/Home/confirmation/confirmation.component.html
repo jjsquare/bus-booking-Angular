@@ -1,0 +1,9 @@
+<p>confirmation works!</p>
+<div class="container">
+    <div *ngFor="let seat of selectedSeats">
+        <p>{{seat.passengerName}}</p>
+        <p>{{seat.age}}</p>
+        <p>{{seat.seatNumber}}</p>
+    </div>
+    <button type="button" (click)="onsubmit()">book</button>
+</div>

@@ -1,0 +1,54 @@
+.booked-seat button{
+    background: red;
+    margin: 1%;
+    padding: 1%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.availble-seat button{
+    background: green;
+    margin: 1%;
+    padding: 1%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.Selected-seat button{
+    background: yellow;
+    margin: 1%;
+    padding: 1%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.list-group{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+ul{
+    list-style: none;
+}
+li{
+    width: max-content;
+    flex-basis: 25%;
+}
+.passenger-details{
+    border: solid;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1%;
+    padding: 1%;
+    width: 25%;
+    flex-basis: 25%;
+}
+
+.btn-primary{
+    margin: 1%;
+}

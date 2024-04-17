@@ -1,0 +1,30 @@
+<div class="container">
+      <h2>bus List</h2>
+      <ul class="list-group">
+        <li *ngFor="let bus of busArray" class="list-group-item">
+          @if (bus.totalSeatsInBus - bus.occupiedSeats<=10) {
+            <div class="red">
+              <p>{{ fromCity | uppercase }} To {{ toCity | uppercase }}</p>
+              <p>Departure Time: {{ bus.departureTime }}</p>
+              <p>available seats: {{bus.totalSeatsInBus - bus.occupiedSeats}}</p>
+              <p>Number of Seats: {{ bus.totalSeatsInBus }}</p>
+            </div>
+          } @else if (bus.totalSeatsInBus - bus.occupiedSeats<=20) {
+            <div class="blue">
+              <p>{{ fromCity | uppercase }} To {{ toCity | uppercase }}</p>
+              <p>Departure Time: {{ bus.departureTime }}</p>
+              <p>available seats: {{bus.totalSeatsInBus - bus.occupiedSeats}}</p>
+              <p>Number of Seats: {{ bus.totalSeatsInBus }}</p>
+            </div>
+          }@else {
+            <div class="green">
+              <p>{{ fromCity | uppercase }} To {{ toCity | uppercase }}</p>
+              <p>Departure Time: {{ bus.departureTime }}</p>
+              <p>available seats: {{bus.totalSeatsInBus - bus.occupiedSeats}}</p>
+              <p>Number of Seats: {{ bus.totalSeatsInBus }}</p>
+            </div>
+          }
+          <button class="btn btn-primary" type="button" (click)="onSubmit(bus.busRouteId, bus.totalSeatsInBus, bus.price)">book</button>
+        </li>
+      </ul>
+    </div> 

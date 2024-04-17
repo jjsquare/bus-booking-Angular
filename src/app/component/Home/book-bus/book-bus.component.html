@@ -1,0 +1,40 @@
+<div class="container">
+<h2>Select seats Here</h2>
+<div>
+    <ul class="list-group">
+        <li class="list-group-items" *ngFor="let seat of totalSeats">
+            @if (!isSelected(seat)) {
+                <div class="Selected-seat">
+                    <button class="seat" type="button" (click)="addSeat(seat)">{{seat}}</button>
+                </div>
+            }
+            @else if (!bookedSeat.includes(seat)) {
+                <div class="availble-seat">
+                    <button class="seat" type="button" (click)="addSeat(seat)">{{seat}}</button>
+                </div>
+            }
+            @else {
+                <div class="booked-seat">
+                    <button class="seat" type="button" (click)="addSeat(seat)">{{seat}}</button>
+                </div>
+            }
+        </li>
+    </ul>
+    <div class="passenger-details" *ngFor="let passenger of selectedSeats">
+
+        <label class="form-label">Seat Number</label>
+        <input class="form-control" [(ngModel)]="passenger.seatNumber" disabled placeholder="{{passenger.seatNumber}}" required><br>
+        <label class="form-label">Name</label>
+        <input class="form-control" [(ngModel)]="passenger.passengerName" placeholder="passenger Name" required><br>
+        <label class="form-label">Age</label>
+        <input class="form-control" [(ngModel)]="passenger.age" placeholder="21" required><br>
+        <label class="form-label">Price</label>
+        <input class="form-control" [(ngModel)]="passenger.price" placeholder="{{passenger.price}}" disabled >
+    </div>
+    <form>
+        <button class="btn btn-primary" type="submit" (click)="onSubmit()" [disabled]="!isOkay()">submit</button>
+    </form>
+</div>
+</div>
+<br>
+
